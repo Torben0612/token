@@ -1,0 +1,23 @@
+sh -c "$(curl -sSfL https://release.solana.com/v1.8.6/install)"
+
+
+solana-keygen new
+solana balance
+
+
+curl https://sh.rustup.rs -sSf | sh
+
+sudo apt install libudev-dev -y
+sudo apt install libssl-dev pkg-config -y
+sudo apt install build-essential -y
+
+cargo install spl-token-cli
+spl-token create-token
+spl-token creat-account yourtokenaddress
+
+
+spl-token mint yourtokenaddress amountyouwanttomint yourtokenaccount
+spl-token accounts
+
+
+spl-token transfer --fund-recipient --allow-unfunded-recipient yourtokenaddress amount recipientwalletaddress
